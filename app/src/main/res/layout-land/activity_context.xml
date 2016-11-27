@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#337AB7">
+
+    <RadioButton
+        android:layout_marginLeft="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daytime"
+        android:id="@+id/day_radio"
+        android:checked="false"
+        android:layout_alignBaseline="@+id/night_radio"
+        android:layout_alignBottom="@+id/night_radio"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Night"
+        android:id="@+id/night_radio"
+        android:checked="false"
+        android:layout_marginEnd="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/mag_value"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Light Intensity:"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/light_txt"
+        android:textStyle="bold"
+        android:textColor="#767272"
+        android:layout_alignBaseline="@+id/light_value"
+        android:layout_alignBottom="@+id/light_value"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="light"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/light_value"
+        android:layout_below="@+id/night_radio"
+        android:layout_alignStart="@+id/night_radio"
+        android:layout_marginTop="36dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Acceleration:"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/acc_txt"
+        android:textStyle="bold"
+        android:textColor="#767272"
+        android:layout_marginBottom="59dp"
+        android:layout_above="@+id/mag_txt"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Acc"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/acc_value"
+        android:layout_alignBaseline="@+id/acc_txt"
+        android:layout_alignBottom="@+id/acc_txt"
+        android:layout_alignStart="@+id/night_radio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="mag"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/mag_value"
+        android:layout_alignBottom="@+id/mag_txt"
+        android:layout_alignEnd="@+id/fab"
+        android:layout_alignTop="@+id/mag_txt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Status:"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/status_txt"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:layout_above="@+id/result"
+        android:layout_alignStart="@+id/mag_txt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="result"
+        android:paddingLeft="15dp"
+        android:paddingRight="8dp"
+        android:id="@+id/result"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:textSize="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/day_radio"
+        android:layout_marginBottom="127dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_dialog_map"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Magnetic Intensity in x:"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/mag_txt"
+        android:textStyle="bold"
+        android:textColor="#767272"
+        android:layout_marginBottom="37dp"
+        android:layout_above="@+id/status_txt"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

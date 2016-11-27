@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#337AB7">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/light_layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Light Intensity:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/light_txt"
+            android:textStyle="bold"
+            android:textColor="#767272"
+            android:layout_marginTop="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/light_value"
+            android:layout_alignBottom="@+id/light_txt"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acc_layout"
+        android:layout_below="@+id/light_layout"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Acceleration in x:"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:id="@+id/acc__x_txt"
+        android:textStyle="bold"
+        android:textColor="#767272"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true" />
+        <TextView
+            android:text="acc_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acc_x_value"
+            android:layout_alignBottom="@+id/acc__x_txt"
+            android:layout_alignParentEnd="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Acceleration in y:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/acc__y_txt"
+            android:textStyle="bold"
+            android:textColor="#767272"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/acc__x_txt"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:text="acc_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acc_y_value"
+            android:layout_alignBottom="@+id/acc__y_txt"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Acceleration in z:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/acc__z_txt"
+            android:textStyle="bold"
+            android:textColor="#767272"
+            android:layout_below="@+id/acc__y_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"/>
+        <TextView
+            android:text="acc_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acc_z_value"
+            android:layout_alignBottom="@+id/acc__z_txt"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_layout"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Magnetic Intensity:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/mag_txt"
+            android:textStyle="bold"
+            android:textColor="#767272"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="75dp" />
+        <TextView
+            android:text="magnetic intensity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mag_value"
+            android:layout_alignBottom="@+id/mag_txt"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_dialog_map"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="result"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp"
+            android:id="@+id/result"
+            android:textColor="#ffffff"
+            android:textStyle="bold|italic"
+            android:textSize="25dp"
+            android:layout_above="@+id/fab"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="70dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Your Status:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/status_txt"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:layout_above="@+id/result"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
