@@ -107,11 +107,35 @@
             android:id="@+id/acc_z_value"
             android:layout_alignBottom="@+id/acc__z_txt"
             android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Joint Acceleration:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/acc__txt"
+            android:textStyle="bold"
+            android:textColor="#767272"
+            android:layout_below="@+id/acc__z_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"/>
+        <TextView
+            android:text="joint acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acc_value"
+            android:layout_alignBottom="@+id/acc__txt"
+            android:layout_alignParentEnd="true"/>
+
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/mag_layout"
         android:layout_below="@+id/acc_layout"
         android:layout_marginTop="30dp">
         <TextView
@@ -140,6 +164,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/mag_layout"
         android:id="@+id/status_layout"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
@@ -161,6 +186,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Your Status:"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/status_txt"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:layout_above="@+id/fab"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="36dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="result"
             android:paddingLeft="15dp"
             android:paddingRight="8dp"
@@ -169,21 +209,7 @@
             android:textStyle="bold|italic"
             android:textSize="25dp"
             android:layout_above="@+id/fab"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="70dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Your Status:"
-            android:paddingLeft="10dp"
-            android:paddingRight="6dp"
-            android:id="@+id/status_txt"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:textSize="25dp"
-            android:layout_above="@+id/result"/>
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
 
